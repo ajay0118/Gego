@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Services — Mobile Slider (responsive)</title>
+
+  <!-- Tailwind (CDN for quick testing) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Slick CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <style>
+    /* optional small tweak so slick dots appear above background */
+    .slick-dots { bottom: -10px; }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+<section id="services" class="py-12 sm:py-16 lg:py-20 bg-slate-50" aria-labelledby="services-title">
+  <div class="mx-auto max-w-7xl xl:max-w-[100rem] px-4 sm:px-6 lg:px-8 xl:px-12">
+
+    <!-- Section Title -->
+    <div class="text-center mb-12 sm:mb-16">
+      <h2 id="services-title" class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-800 mb-4">Our Services</h2>
+      <div class="w-12 sm:w-16 h-0.5 bg-slate-800 mx-auto"></div>
+    </div>
+
+    <!-- MOBILE SLIDER: visible only on mobile -->
+    <div class="block sm:hidden">
+      <div class="services-slider">
+        <!-- each child is a slide -->
+        <div class="p-4">
+          <div class="bg-white border border-slate-100 rounded-xl p-6 text-center hover:shadow-xl">
+            <img src="./assets/icons/web_design.png" alt="Web Design" class="mx-auto w-12 h-12 mb-4 object-contain"/>
+            <h3 class="text-lg font-semibold">Web Design</h3>
+            <p class="text-sm text-slate-500 mt-2">Creative UI & responsive pages</p>
+          </div>
+        </div>
+
+        <div class="p-4">
+          <div class="bg-white border border-slate-100 rounded-xl p-6 text-center hover:shadow-xl">
+            <img src="./assets/icons/Development.png" alt="Development" class="mx-auto w-12 h-12 mb-4 object-contain"/>
+            <h3 class="text-lg font-semibold">Development</h3>
+            <p class="text-sm text-slate-500 mt-2">Frontend & backend solutions</p>
+          </div>
+        </div>
+
+        <div class="p-4">
+          <div class="bg-white border border-slate-100 rounded-xl p-6 text-center hover:shadow-xl">
+            <img src="./assets/icons/branding.png" alt="Branding" class="mx-auto w-12 h-12 mb-4 object-contain"/>
+            <h3 class="text-lg font-semibold">Branding</h3>
+            <p class="text-sm text-slate-500 mt-2">Identity & brand systems</p>
+          </div>
+        </div>
+
+        <div class="p-4">
+          <div class="bg-white border border-slate-100 rounded-xl p-6 text-center hover:shadow-xl">
+            <img src="./assets/icons/marketing.png" alt="Marketing" class="mx-auto w-12 h-12 mb-4 object-contain"/>
+            <h3 class="text-lg font-semibold">Graphic Design</h3>
+            <p class="text-sm text-slate-500 mt-2">Print & digital creatives</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESKTOP GRID: visible on sm and up -->
+    <div class="hidden sm:block">
+      <div class="max-w-5xl mx-auto">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4">
+          <!-- Keep your original interactive cards here if needed -->
+          <label class="service-card bg-white border border-slate-100 rounded-xl p-6 sm:p-8 text-center cursor-pointer hover:shadow-xl">
+            <input type="radio" name="service" class="hidden peer"/>
+            <div>
+              <img src="./assets/icons/web_design.png" alt="Web Design" class="mx-auto w-12 h-12 mb-4 object-contain"/>
+              <h3 class="text-lg sm:text-xl font-semibold">Web Design</h3>
+            </div>
+          </label>
+
+          <label class="service-card bg-white border border-slate-100 rounded-xl p-6 sm:p-8 text-center cursor-pointer hover:shadow-xl">
+            <input type="radio" name="service" class="hidden peer"/>
+            <div>
+              <img src="./assets/icons/Development.png" alt="Development" class="mx-auto w-12 h-12 mb-4 object-contain"/>
+              <h3 class="text-lg sm:text-xl font-semibold">Development</h3>
+            </div>
+          </label>
+
+          <label class="service-card bg-white border border-slate-100 rounded-xl p-6 sm:p-8 text-center cursor-pointer hover:shadow-xl">
+            <input type="radio" name="service" class="hidden peer"/>
+            <div>
+              <img src="./assets/icons/branding.png" alt="Branding" class="mx-auto w-12 h-12 mb-4 object-contain"/>
+              <h3 class="text-lg sm:text-xl font-semibold">Branding</h3>
+            </div>
+          </label>
+
+          <label class="service-card bg-white border border-slate-100 rounded-xl p-6 sm:p-8 text-center cursor-pointer hover:shadow-xl">
+            <input type="radio" name="service" class="hidden peer"/>
+            <div>
+              <img src="./assets/icons/marketing.png" alt="Marketing" class="mx-auto w-12 h-12 mb-4 object-contain"/>
+              <h3 class="text-lg sm:text-xl font-semibold">Graphic Design</h3>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why Choose Us (unchanged) -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 mt-12 sm:mt-16 items-start">
+        <div>
+          <h3 class="text-xl sm:text-2xl font-normal text-indigo-600 mb-3 sm:mb-4">Why Choose Us?</h3>
+          <h4 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-slate-800 leading-tight">
+            We Build Unique Designs And Create Creative Websites.
+          </h4>
+        </div>
+        <div>
+          <h4 class="text-lg sm:text-xl lg:text-2xl font-semibold text-slate-600 mb-4 sm:mb-6">Creative Web Design</h4>
+          <p class="text-sm sm:text-base lg:text-lg text-slate-600 mb-3 sm:mb-4 leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <p class="text-sm sm:text-base lg:text-lg text-slate-600 leading-relaxed">
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- jQuery + Slick JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script>
+  // Init/Destroy Slick only on mobile (Tailwind "sm" breakpoint is 640px)
+  (function () {
+    var $slider = $('.services-slider');
+
+    function initSlickIfMobile() {
+      var isMobile = window.matchMedia('(max-width: 639px)').matches;
+      if (isMobile) {
+        if ($slider.length && !$slider.hasClass('slick-initialized')) {
+          $slider.slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1000,
+            dots: true,
+            arrows: false,
+            adaptiveHeight: true,
+            mobileFirst: true
+          });
+        }
+      } else {
+        if ($slider.length && $slider.hasClass('slick-initialized')) {
+          $slider.slick('unslick'); // destroy slider on larger screens
+        }
+      }
+    }
+
+    // run on load
+    $(document).ready(initSlickIfMobile);
+
+    // debounce resize/orientation events
+    var resizeTimer;
+    $(window).on('resize orientationchange', function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(initSlickIfMobile, 150);
+    });
+  })();
+</script>
+</body>
+</html>

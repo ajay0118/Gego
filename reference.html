@@ -1,0 +1,1056 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nunito-style Landing • Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <meta name="description" content="One-page landing inspired by Nunito Bootstrap template, implemented with Tailwind CSS." />
+  </head>
+  
+  <body class="antialiased text-slate-700 selection:bg-indigo-200 selection:text-indigo-900 overflow-x-hidden">
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b border-slate-100">
+      <div class="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8">
+        <div class="flex h-14 sm:h-16 md:h-20 lg:h-24 items-center justify-between">
+          
+          <!-- Logo -->
+          <a href="#" class="flex items-center gap-2" aria-label="Home">
+            <span class="font-extrabold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-gray-900">Nunito</span>
+          </a>
+
+          <!-- Desktop Nav -->
+          <nav class="hidden lg:flex items-center gap-3 xl:gap-6 text-sm lg:text-base xl:text-lg font-bold text-gray-900" aria-label="main">
+            <a href="#features" class="hover:text-indigo-600 px-2 py-1">Home</a>
+            <a href="#about" class="hover:text-indigo-600 px-2 py-1">About</a>
+            <a href="#services" class="hover:text-indigo-600 px-2 py-1">Services</a>
+            <a href="#portfolio" class="hover:text-indigo-600 px-2 py-1">Portfolio</a>
+            <a href="#testimonials" class="hover:text-indigo-600 px-2 py-1">Price</a>
+            <a href="#pricing" class="hover:text-indigo-600 px-2 py-1">Blog</a>
+            <a href="#contact" class="hover:text-indigo-600 px-2 py-1">Contact</a>
+          </nav>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobileMenuButton" class="lg:hidden inline-flex items-center justify-center rounded-md p-2 text-slate-700 hover:bg-slate-200 focus:ring-2 focus:ring-indigo-500" aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <img src="./assets/icons/hamburger.png" alt="menu" class="h-5 w-5 sm:h-6 sm:w-6 object-contain" />
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Nav -->
+      <div id="mobileMenu" class="lg:hidden hidden border-t border-slate-100 bg-white" role="navigation" aria-label="Mobile">
+        <div class="space-y-1 px-3 py-3">
+          <a href="#features" class="block rounded px-3 py-2 text-sm hover:bg-slate-100">Home</a>
+          <a href="#about" class="block rounded px-3 py-2 text-sm hover:bg-slate-100">About</a>
+          <a href="#services" class="block rounded px-3 py-2 text-sm hover:bg-slate-100">Services</a>
+          <a href="#portfolio" class="block rounded px-3 py-2 text-sm hover:bg-slate-100">Portfolio</a>
+          <a href="#testimonials" class="block rounded px-3 py-2 text-sm hover:bg-slate-100">Price</a>
+          <a href="#pricing" class="block rounded px-3 py-2 text-sm hover:bg-slate-100">Blog</a>
+          <a href="#contact" class="block rounded px-3 py-2 text-sm hover:bg-slate-100">Contact</a>
+        </div>
+      </div>
+    </header>
+    
+    <main id="content" tabindex="-1">
+
+      <!--Hero -->
+      <section class="relative min-h-[85vh] sm:min-h-[90vh] flex items-center justify-center text-center overflow-hidden">
+        
+        <div class="absolute inset-0 -z-10" style="background-image:url('./assets/images/Hero_bg.jpg'); background-size:cover; background-position:center;"></div>
+        
+        <div class="absolute inset-0 bg-black bg-opacity-50 -z-0"></div>
+
+        <div class="relative z-10 max-w-4xl mx-auto px-4 text-white">
+          <h4 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold">We Are Creative</h4>
+
+          <h1 class="mt-2 sm:mt-3 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold leading-tight">
+            Create Awesome Templates
+          </h1>
+          
+          <p class="mt-3 sm:mt-4 max-w-2xl mx-auto text-sm sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed px-4">
+            A single place to share, curate and discover visuals that tell a story.
+          </p>
+          
+          <div class="mt-4 sm:mt-6 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4">
+            <a href="#" class="w-full sm:w-auto max-w-[280px] bg-indigo-600 text-white text-sm sm:text-base font-semibold py-2.5 sm:py-3 px-5 sm:px-6 rounded-xl shadow-lg hover:bg-white hover:text-indigo-900 transition">
+              Get Started
+            </a>
+            <a href="#about" class="w-full sm:w-auto max-w-[280px] bg-white text-gray-900 text-sm sm:text-base font-semibold py-2.5 sm:py-3 px-5 sm:px-6 rounded-xl shadow-lg hover:bg-indigo-600 hover:text-white transition">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="features" class="py-12 sm:py-16 lg:py-20 xl:py-24 bg-gray-100">
+        <div class="mx-auto max-w-7xl xl:max-w-[100rem] px-4 sm:px-6 lg:px-8 xl:px-12">
+          <div class="mx-auto max-w-4xl text-center">
+            <h2 id="features-title" class="text-xl sm:text-2xl lg:text-3xl font-medium text-indigo-600 mb-3 sm:mb-4 mt-8 sm:mt-12 lg:mt-20">About Our Agency</h2>
+            <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-slate-900 mb-4 sm:mb-6 mt-6 sm:mt-8 lg:mt-10">
+              We love what we do & we do it with passion!
+            </h3>
+            <p class="text-sm sm:text-base md:text-lg lg:text-xl text-slate-600 mb-4 sm:mb-6 leading-relaxed mx-auto px-4 sm:px-0">
+              Lorem Ipsum is simply dummy text of the printing and type setting industry when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
+            </p>
+            <div class="w-12 sm:w-16 h-0.5 bg-indigo-600 mx-auto mb-8 sm:mb-12"></div>
+          </div>
+      
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 xl:gap-12 mt-8 sm:mt-12 mb-12 sm:mb-16 lg:mb-24">
+            
+            <!-- Card 1 -->
+            <div class="relative group bg-white rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8 text-center transition-all duration-500 overflow-hidden cursor-pointer border border-white">
+              <div class="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition duration-500"
+                   style="background-image:url('./assets/images/webdesign_bg.jpg');"></div>
+              <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition duration-400"></div>
+              <div class="relative z-10">
+                <div class="mb-4 sm:mb-6 flex justify-center">
+                  <div class="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-indigo-50 rounded-full flex items-center justify-center group-hover:bg-white transition mt-6 sm:mt-8 lg:mt-12">
+                    <img src="./assets/icons/web_design.png" alt="Web Design" class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain" />
+                  </div>
+                </div>
+                <h3 class="text-base sm:text-lg lg:text-xl font-bold text-slate-800 mb-3 sm:mb-4 group-hover:text-white">Web Design</h3>
+                <p class="text-xs sm:text-sm lg:text-base text-slate-600 leading-relaxed group-hover:text-white/90 px-2">
+                  Creative and responsive website designs tailored to your needs.
+                </p>
+              </div>
+            </div>
+      
+            <!-- Card 2 -->
+            <div class="relative group bg-white rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8 text-center transition-all duration-500 overflow-hidden cursor-pointer border border-white">
+              <div class="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition duration-500"
+                   style="background-image:url('./assets/images/development_bg.jpg');"></div>
+              <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition duration-400"></div>
+              <div class="relative z-10">
+                <div class="mb-4 sm:mb-6 flex justify-center">
+                  <div class="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-indigo-50 rounded-full flex items-center justify-center group-hover:bg-white transition mt-6 sm:mt-8 lg:mt-12">
+                    <img src="./assets/icons/Development.png" alt="Development" class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain" />
+                  </div>
+                </div>
+                <h3 class="text-base sm:text-lg lg:text-xl font-bold text-slate-800 mb-3 sm:mb-4 group-hover:text-white">Development</h3>
+                <p class="text-xs sm:text-sm lg:text-base text-slate-600 leading-relaxed group-hover:text-white/90 px-2">
+                  Creative and responsive website designs tailored to your needs.
+                </p>
+              </div>
+            </div>
+      
+            <!-- Card 3 -->
+            <div class="relative group bg-white rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8 text-center transition-all duration-500 overflow-hidden cursor-pointer border border-white">
+              <div class="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition duration-500"
+                   style="background-image:url('./assets/images/branding_bg.jpg');"></div>
+              <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition duration-400"></div>
+              <div class="relative z-10">
+                <div class="mb-4 sm:mb-6 flex justify-center">
+                  <div class="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-indigo-50 rounded-full flex items-center justify-center group-hover:bg-white transition mt-6 sm:mt-8 lg:mt-12">
+                    <img src="./assets/icons/branding.png" alt="Branding" class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain" />
+                  </div>
+                </div>
+                <h3 class="text-base sm:text-lg lg:text-xl font-bold text-slate-800 mb-3 sm:mb-4 group-hover:text-white">Branding</h3>
+                <p class="text-xs sm:text-sm lg:text-base text-slate-600 leading-relaxed group-hover:text-white/90 px-2">
+                  Creative and responsive website designs tailored to your needs.
+                </p>
+              </div>
+            </div>
+      
+            <!-- Card 4 -->
+            <div class="relative group bg-white rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8 text-center transition-all duration-500 overflow-hidden cursor-pointer border border-white">
+              <div class="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition duration-500"
+                   style="background-image:url('./assets/images/marketing_bg.jpg');"></div>
+              <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition duration-400"></div>
+              <div class="relative z-10">
+                <div class="mb-4 sm:mb-6 flex justify-center">
+                  <div class="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-indigo-50 rounded-full flex items-center justify-center group-hover:bg-white transition mt-6 sm:mt-8 lg:mt-12">
+                    <img src="./assets/icons/marketing.png" alt="Marketing" class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain" />
+                  </div>
+                </div>
+                <h3 class="text-base sm:text-lg lg:text-xl font-bold text-slate-800 mb-3 sm:mb-4 group-hover:text-white">Marketing</h3>
+                <p class="text-xs sm:text-sm lg:text-base text-slate-600 leading-relaxed group-hover:text-white/90 px-2">
+                  Creative and responsive website designs tailored to your needs.
+                </p>
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+
+      <!-- About section -2  -->
+      <section id="about" class="py-12 sm:py-16 lg:py-20 bg-white" aria-labelledby="about-title">
+        <div class="mx-auto max-w-7xl xl:max-w-[100rem] px-4 sm:px-6 lg:px-8 xl:px-12">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+            <!-- Left Column - Text Content -->
+            <div class="order-2 lg:order-1">
+              <h2 class="text-xl sm:text-2xl font-normal text-indigo-600 mb-3 sm:mb-4">Why Choose Us?</h2>
+              <h3 id="about-title" class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-800 mb-4 sm:mb-6">
+                Some Words about us.
+              </h3>
+              <p class="text-sm sm:text-base lg:text-lg text-slate-600 mb-3 sm:mb-4 leading-relaxed">
+                Lorem Ipsum is simply dummy text of the printing and type setting industry when an unknown printer.
+              </p>
+              <p class="text-sm sm:text-base lg:text-lg text-slate-600 mb-6 sm:mb-8 leading-relaxed">
+                Lorem Ipsum is simply dummy text of the printing and type setting industry when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
+              </p>
+              <button class="inline-flex items-center px-5 sm:px-6 lg:px-8 py-2.5 sm:py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium rounded-full hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl text-sm sm:text-base">
+                Learn More
+              </button>
+            </div>
+      
+            <!-- Right Column - Image -->
+            <div class="relative order-1 lg:order-2">
+              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"
+                   alt="Creative professional at work"
+                   class="w-full h-48 sm:h-64 lg:h-80 xl:h-[500px] object-cover rounded-lg shadow-xl" />
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-indigo-600 rounded-full flex items-center justify-center shadow-2xl">
+                  <img src="./assets/icons/play.png" alt="play" class="w-4 h-4 sm:w-6 sm:h-6 lg:w-8 lg:h-8 ml-1 object-contain" />
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Skills Bars -->
+          <div class="mt-8 sm:mt-12 lg:mt-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
+              <!-- Skill 1 -->
+              <div class="space-y-2">
+                <div class="flex justify-between items-center">
+                  <span class="text-sm sm:text-base lg:text-lg font-medium text-slate-800">Web Design</span>
+                  <span class="text-sm sm:text-base lg:text-lg font-bold text-indigo-600">95%</span>
+                </div>
+                <div class="w-full bg-slate-200 rounded-full h-2.5 sm:h-3">
+                  <div class="bg-gradient-to-r from-indigo-600 to-purple-600 h-2.5 sm:h-3 rounded-full" style="width: 90%"></div>
+                </div>
+              </div>
+      
+              <!-- Skill 2 -->
+              <div class="space-y-2">
+                <div class="flex justify-between items-center">
+                  <span class="text-sm sm:text-base lg:text-lg font-medium text-slate-800">Development</span>
+                  <span class="text-sm sm:text-base lg:text-lg font-bold text-indigo-600">85%</span>
+                </div>
+                <div class="w-full bg-slate-200 rounded-full h-2.5 sm:h-3">
+                  <div class="bg-gradient-to-r from-indigo-600 to-purple-600 h-2.5 sm:h-3 rounded-full" style="width: 85%"></div>
+                </div>
+              </div>
+      
+              <!-- Skill 3 -->
+              <div class="space-y-2">
+                <div class="flex justify-between items-center">
+                  <span class="text-sm sm:text-base lg:text-lg font-medium text-slate-800">Branding</span>
+                  <span class="text-sm sm:text-base lg:text-lg font-bold text-indigo-600">75%</span>
+                </div>
+                <div class="w-full bg-slate-200 rounded-full h-2.5 sm:h-3">
+                  <div class="bg-gradient-to-r from-indigo-600 to-purple-600 h-2.5 sm:h-3 rounded-full" style="width: 75%"></div>
+                </div>
+              </div>
+      
+              <!-- Skill 4 -->
+              <div class="space-y-2">
+                <div class="flex justify-between items-center">
+                  <span class="text-sm sm:text-base lg:text-lg font-medium text-slate-800">Marketing</span>
+                  <span class="text-sm sm:text-base lg:text-lg font-bold text-indigo-600">75%</span>
+                </div>
+                <div class="w-full bg-slate-200 rounded-full h-2.5 sm:h-3">
+                  <div class="bg-gradient-to-r from-indigo-600 to-purple-600 h-2.5 sm:h-3 rounded-full" style="width: 75%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="py-12 sm:py-16 lg:py-20 bg-slate-50" aria-labelledby="services-title">
+        <div class="mx-auto max-w-7xl xl:max-w-[100rem] px-4 sm:px-6 lg:px-8 xl:px-12">
+          
+          <!-- Section Title -->
+          <div class="text-center mb-12 sm:mb-16">
+            <h2 id="services-title" class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-800 mb-4">Our Services</h2>
+            <div class="w-12 sm:w-16 h-0.5 bg-slate-800 mx-auto"></div>
+          </div>
+      
+          <!-- MOBILE SLIDER (only visible on mobile) -->
+          <div class="services-slider block sm:hidden">
+            <!-- each child is a slide -->
+            <div class="p-4">
+              <div class="bg-white border border-slate-100 rounded-xl p-6 text-center hover:shadow-xl">
+                <img src="./assets/icons/web_design.png" alt="Web Design" class="mx-auto w-12 h-12 mb-4 object-contain"/>
+                <h3 class="text-lg font-semibold">Web Design</h3>
+                <p class="text-sm text-slate-500 mt-2">Creative UI & responsive pages</p>
+              </div>
+            </div>
+      
+            <div class="p-4">
+              <div class="bg-white border border-slate-100 rounded-xl p-6 text-center hover:shadow-xl">
+                <img src="./assets/icons/Development.png" alt="Development" class="mx-auto w-12 h-12 mb-4 object-contain"/>
+                <h3 class="text-lg font-semibold">Development</h3>
+                <p class="text-sm text-slate-500 mt-2">Frontend & backend solutions</p>
+              </div>
+            </div>
+      
+            <div class="p-4">
+              <div class="bg-white border border-slate-100 rounded-xl p-6 text-center hover:shadow-xl">
+                <img src="./assets/icons/branding.png" alt="Branding" class="mx-auto w-12 h-12 mb-4 object-contain"/>
+                <h3 class="text-lg font-semibold">Branding</h3>
+                <p class="text-sm text-slate-500 mt-2">Identity & brand systems</p>
+              </div>
+            </div>
+      
+            <div class="p-4">
+              <div class="bg-white border border-slate-100 rounded-xl p-6 text-center hover:shadow-xl">
+                <img src="./assets/icons/marketing.png" alt="Marketing" class="mx-auto w-12 h-12 mb-4 object-contain"/>
+                <h3 class="text-lg font-semibold">Graphic Design</h3>
+                <p class="text-sm text-slate-500 mt-2">Print & digital creatives</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- DESKTOP GRID (hidden on mobile) -->
+          <div class="hidden sm:block">
+            <div class="max-w-5xl mx-auto">
+              <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4">
+                <div class="bg-white border border-slate-100 rounded-xl p-6 sm:p-8 text-center hover:shadow-xl">
+                  <img src="./assets/icons/web_design.png" class="mx-auto w-12 h-12 mb-4 object-contain"/>
+                  <h3 class="text-lg sm:text-xl font-semibold">Web Design</h3>
+                </div>
+                <div class="bg-white border border-slate-100 rounded-xl p-6 sm:p-8 text-center hover:shadow-xl">
+                  <img src="./assets/icons/Development.png" class="mx-auto w-12 h-12 mb-4 object-contain"/>
+                  <h3 class="text-lg sm:text-xl font-semibold">Development</h3>
+                </div>
+                <div class="bg-white border border-slate-100 rounded-xl p-6 sm:p-8 text-center hover:shadow-xl">
+                  <img src="./assets/icons/branding.png" class="mx-auto w-12 h-12 mb-4 object-contain"/>
+                  <h3 class="text-lg sm:text-xl font-semibold">Branding</h3>
+                </div>
+                <div class="bg-white border border-slate-100 rounded-xl p-6 sm:p-8 text-center hover:shadow-xl">
+                  <img src="./assets/icons/marketing.png" class="mx-auto w-12 h-12 mb-4 object-contain"/>
+                  <h3 class="text-lg sm:text-xl font-semibold">Graphic Design</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+      </section>
+      
+      <!-- jQuery + Slick -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+      <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+      
+      <script>
+        $(document).ready(function () {
+          function initSlick() {
+            if (window.matchMedia('(max-width: 639px)').matches) {
+              if (!$('.services-slider').hasClass('slick-initialized')) {
+                $('.services-slider').slick({
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  autoplay: true,
+                  autoplaySpeed: 2000,
+                  dots: true,
+                  arrows: false,
+                  adaptiveHeight: true
+                });
+              }
+            } else {
+              if ($('.services-slider').hasClass('slick-initialized')) {
+                $('.services-slider').slick('unslick');
+              }
+            }
+          }
+      
+          // Init on load
+          initSlick();
+      
+          // Re-init on resize
+          $(window).on('resize', function () {
+            initSlick();
+          });
+        });
+      </script>
+      
+      
+
+     <!-- Main Features Section -->
+     <section class="relative py-12 sm:py-16 lg:py-20 xl:py-24 bg-slate-900 overflow-hidden">
+  
+      <div class="absolute inset-0">
+        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=format&fit=crop" alt="Professional working" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-slate-900/80 backdrop-blur-sm"></div>
+      </div>
+      
+      <div class="relative z-10 mx-auto max-w-7xl xl:max-w-[100rem] px-4 sm:px-6 lg:px-8 xl:px-12">
+        <div class="text-center mb-8 sm:mb-12 lg:mb-16">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">Main Features</h2>
+          <div class="w-12 sm:w-16 h-1 bg-indigo-600 mx-auto"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
+          
+          <div class="text-center">
+            <div class="flex justify-center mb-3 sm:mb-4 lg:mb-6">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 border-2 border-indigo-600 rounded-lg flex items-center justify-center">
+                <img src="./assets/icons/creative_design.png" alt="feature icon" class="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 object-contain" />
+              </div>
+            </div>
+            <h3 class="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white mb-2 sm:mb-3 lg:mb-4">Creative Design</h3>
+            <p class="text-xs sm:text-sm md:text-base lg:text-lg text-slate-300 leading-relaxed px-2">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div class="w-12 sm:w-16 h-0.5 bg-white mb-2 sm:mb-4 mt-2 mx-auto"></div>
+          </div>
+          
+          <div class="text-center">
+            <div class="flex justify-center mb-3 sm:mb-4 lg:mb-6">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 border-2 border-indigo-600 rounded-lg flex items-center justify-center">
+                <img src="./assets/icons/userexperience.png" alt="feature icon" class="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 object-contain" />
+              </div>
+            </div>
+            <h3 class="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white mb-2 sm:mb-3 lg:mb-4">User Experience</h3>
+            <p class="text-xs sm:text-sm md:text-base lg:text-lg text-slate-300 leading-relaxed px-2">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div class="w-12 sm:w-16 h-0.5 bg-white mb-2 sm:mb-4 mt-2 mx-auto"></div>
+          </div>
+          
+          <div class="text-center sm:col-span-2 lg:col-span-1">
+            <div class="flex justify-center mb-3 sm:mb-4 lg:mb-6">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 border-2 border-indigo-600 rounded-lg flex items-center justify-center">
+                <img src="./assets/icons/customizability.png" alt="feature icon" class="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 object-contain" />
+              </div>
+            </div>
+            <h3 class="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white mb-2 sm:mb-3 lg:mb-4">Customizability</h3>
+            <p class="text-xs sm:text-sm md:text-base lg:text-lg text-slate-300 leading-relaxed px-2">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div class="w-12 sm:w-16 h-0.5 bg-white mb-2 sm:mb-4 mt-2 mx-auto"></div>
+          </div>
+          
+          <div class="text-center">
+            <div class="flex justify-center mb-3 sm:mb-4 lg:mb-6">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 border-2 border-indigo-600 rounded-lg flex items-center justify-center">
+                <img src="./assets/icons/Retina_Ready.png" alt="feature icon" class="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 object-contain" />
+              </div>
+            </div>
+            <h3 class="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white mb-2 sm:mb-3 lg:mb-4">Retina Ready</h3>
+            <p class="text-xs sm:text-sm md:text-base lg:text-lg text-slate-300 leading-relaxed px-2">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+          
+          <div class="text-center">
+            <div class="flex justify-center mb-3 sm:mb-4 lg:mb-6">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 border-2 border-indigo-600 rounded-lg flex items-center justify-center">
+                <img src="./assets/icons/web_design.png" alt="feature icon" class="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 object-contain" />
+              </div>
+            </div>
+            <h3 class="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white mb-2 sm:mb-3 lg:mb-4">Fully Responsive</h3>
+            <p class="text-xs sm:text-sm md:text-base lg:text-lg text-slate-300 leading-relaxed px-2">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+          
+          <div class="text-center sm:col-span-2 lg:col-span-1">
+            <div class="flex justify-center mb-3 sm:mb-4 lg:mb-6">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 border-2 border-indigo-600 rounded-lg flex items-center justify-center">
+                <img src="./assets/icons/marketing.png" alt="feature icon" class="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 object-contain" />
+              </div>
+            </div>
+            <h3 class="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white mb-2 sm:mb-3 lg:mb-4">Custom Support</h3>
+            <p class="text-xs sm:text-sm md:text-base lg:text-lg text-slate-300 leading-relaxed px-2">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    
+    
+
+    <!-- Desktop Portfolio (Grid + Filter) in Desktop view.. wehn i hoverin the cards.. the text like Logo&Branding and Creative Skills and then zoom image was displayed  -->
+<section id="portfolio-desktop" class="py-12 sm:py-16 lg:py-20 bg-white hidden sm:block" aria-labelledby="portfolio-title">
+  <div class="mx-auto max-w-7xl xl:max-w-[100rem] px-4 sm:px-6 lg:px-8 xl:px-12">
+    
+    <!-- Section Heading -->
+    <div class="text-center mb-8 sm:mb-12">
+      <h2 id="portfolio-title" class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-800 mb-4">Creative Portfolio</h2>
+      <div class="w-12 sm:w-16 h-1 bg-indigo-600 mx-auto"></div>
+    </div>
+
+    <div>
+      <!-- Filter Buttons -->
+      <div class="flex justify-center mb-8 sm:mb-12 px-4 ">
+        <div class="flex flex-wrap gap-1 bg-slate-100 rounded-lg p-1 max-w-full">
+          <button data-filter="all" class="px-3 sm:px-6 py-2 rounded-md text-xs sm:text-sm font-medium bg-indigo-600 text-black hover:bg-indigo-700 whitespace-nowrap">ALL</button>
+          <button data-filter="brand" class="px-3 sm:px-6 py-2 rounded-md text-xs sm:text-sm font-medium text-slate-700 bg-slate-100 hover:bg-indigo-600 hover:text-white transition-colors whitespace-nowrap">BRAND</button>
+          <button data-filter="design" class="px-3 sm:px-6 py-2 rounded-md text-xs sm:text-sm font-medium text-slate-700 bg-slate-100 hover:bg-indigo-600 hover:text-white transition-colors whitespace-nowrap">DESIGN</button>
+          <button data-filter="graphics" class="px-3 sm:px-6 py-2 rounded-md text-xs sm:text-sm font-medium text-slate-700 bg-slate-100 hover:bg-indigo-600 hover:text-white transition-colors whitespace-nowrap">GRAPHICS</button>
+        </div>
+      </div>
+      
+      <!-- Portfolio Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        
+        <!-- Portfolio Items -->
+        <div class="portfolio-item brand group relative overflow-hidden rounded-lg bg-white shadow-lg">
+          <img src="./assets/images/portfolio1.jpg" alt="Brand Work 1" class="w-full h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80 object-cover transition-transform duration-300 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/70 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <div class="text-center text-white px-4">
+              <h3 class="text-base sm:text-lg font-semibold mb-2">Logo & Branding</h3>
+              <p class="text-xs sm:text-sm mb-4">Creative Design</p>
+              <div class="w-8 h-8 sm:w-10 sm:h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors cursor-pointer mx-auto">
+                <img src="./assets/icons/white_zoom.png" alt="zoom" class="w-4 h-4 sm:w-5 sm:h-5 object-contain" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="portfolio-item brand group relative overflow-hidden rounded-lg bg-white shadow-lg">
+          <img src="./assets/images/portfolio2.jpg" alt="Brand Work 2" class="w-full h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80 object-cover transition-transform duration-300 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/70 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <div class="text-center text-white px-4">
+              <h3 class="text-base sm:text-lg font-semibold mb-2">Logo & Branding</h3>
+              <p class="text-xs sm:text-sm mb-4">Creative Design</p>
+              <div class="w-8 h-8 sm:w-10 sm:h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors cursor-pointer mx-auto">
+                <img src="./assets/icons/white_zoom.png" alt="zoom" class="w-4 h-4 sm:w-5 sm:h-5 object-contain" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Design (3 & 4) -->
+        <div class="portfolio-item design group relative overflow-hidden rounded-lg bg-white shadow-lg">
+          <img src="./assets/images/portfolio3.jpg" alt="Design Work 1" class="w-full h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80 object-cover transition-transform duration-300 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/70 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <div class="text-center text-white px-4">
+              <h3 class="text-base sm:text-lg font-semibold mb-2">UI/UX Design</h3>
+              <p class="text-xs sm:text-sm mb-4">Creative Design</p>
+              <div class="w-8 h-8 sm:w-10 sm:h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors cursor-pointer mx-auto">
+                <img src="./assets/icons/white_zoom.png" alt="zoom" class="w-4 h-4 sm:w-5 sm:h-5 object-contain" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="portfolio-item design group relative overflow-hidden rounded-lg bg-white shadow-lg">
+          <img src="./assets/images/portfolio4.jpg" alt="Design Work 2" class="w-full h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80 object-cover transition-transform duration-300 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/70 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <div class="text-center text-white px-4">
+              <h3 class="text-base sm:text-lg font-semibold mb-2">UI/UX Design</h3>
+              <p class="text-xs sm:text-sm mb-4">Creative Design</p>
+              <div class="w-8 h-8 sm:w-10 sm:h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors cursor-pointer mx-auto">
+                <img src="./assets/icons/white_zoom.png" alt="zoom" class="w-4 h-4 sm:w-5 sm:h-5 object-contain" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Graphics (5 & 6) -->
+        <div class="portfolio-item graphics group relative overflow-hidden rounded-lg bg-white shadow-lg">
+          <img src="./assets/images/portfolio5.jpg" alt="Graphics Work 1" class="w-full h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80 object-cover transition-transform duration-300 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/70 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <div class="text-center text-white px-4">
+              <h3 class="text-base sm:text-lg font-semibold mb-2">Graphic Design</h3>
+              <p class="text-xs sm:text-sm mb-4">Creative Design</p>
+              <div class="w-8 h-8 sm:w-10 sm:h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors cursor-pointer mx-auto">
+                <img src="./assets/icons/white_zoom.png" alt="zoom" class="w-4 h-4 sm:w-5 sm:h-5 object-contain" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="portfolio-item graphics group relative overflow-hidden rounded-lg bg-white shadow-lg">
+          <img src="./assets/images/portfolio6.jpg" alt="Graphics Work 2" class="w-full h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80 object-cover transition-transform duration-300 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/70 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <div class="text-center text-white px-4">
+              <h3 class="text-base sm:text-lg font-semibold mb-2">Graphic Design</h3>
+              <p class="text-xs sm:text-sm mb-4">Creative Design</p>
+              <div class="w-8 h-8 sm:w-10 sm:h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors cursor-pointer mx-auto">
+                <img src="./assets/icons/white_zoom.png" alt="zoom" class="w-4 h-4 sm:w-5 sm:h-5 object-contain" />
+              </div>
+            </div>
+          </div>
+        </div>        
+        
+      </div>
+    </div> 
+  </div>
+  
+  <!-- Portfolio filtering script -->
+  <script>
+    const buttons = document.querySelectorAll('[data-filter]');
+    const items = document.querySelectorAll('.portfolio-item');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+
+        // Change active button color
+        buttons.forEach(b => {
+          b.classList.remove('bg-indigo-600', 'text-Black');
+          b.classList.add('text-slate-700', 'bg-slate-100');
+        });
+        btn.classList.add('bg-indigo-600', 'text-Black');
+
+        // Show/hide items
+        items.forEach(item => {
+          if(filter === 'all') {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.toggle('hidden', !item.classList.contains(filter));
+          }
+        });
+      });
+    });
+  </script>
+</section>
+
+<!-- Mobile Portfolio (Accordion Design) -->
+<section id="portfolio-mobile" class="py-10 px-4 bg-white block sm:hidden">
+  <div class="max-w-md mx-auto">
+
+    <h2 class="text-center text-2xl font-bold text-slate-800 mb-6">Creative Portfolio</h2>
+    <div class="w-12 sm:w-16 h-1 bg-indigo-600 mx-auto mb-8"></div>
+
+    <div id="accordion">
+
+      <h3 class="cursor-pointer bg-indigo-600 text-white px-4 py-3 rounded-t-md">ALL</h3>
+      <div class="border border-t-0 border-slate-200 p-4">
+        <img src="./assets/images/portfolio1.jpg" alt="Brand Work 1" class="w-full h-40 object-cover rounded-md mb-2">
+        <img src="./assets/images/portfolio2.jpg" alt="Brand Work 2" class="w-full h-40 object-cover rounded-md">
+        <img src="./assets/images/portfolio3.jpg" alt="Brand Work 2" class="w-full h-40 object-cover rounded-md">
+        <img src="./assets/images/portfolio4.jpg" alt="Brand Work 2" class="w-full h-40 object-cover rounded-md">
+        <img src="./assets/images/portfolio5.jpg" alt="Brand Work 2" class="w-full h-40 object-cover rounded-md">
+        <img src="./assets/images/portfolio6.jpg" alt="Brand Work 2" class="w-full h-40 object-cover rounded-md">
+      </div>
+  
+      <!-- Accordion Item 1 -->
+      <h3 class="cursor-pointer bg-indigo-600 text-white px-4 py-3 rounded-t-md">Brand</h3>
+      <div class="border border-t-0 border-slate-200 p-4">
+        <img src="./assets/images/portfolio1.jpg" alt="Brand Work 1" class="w-full h-40 object-cover rounded-md mb-2">
+        <img src="./assets/images/portfolio2.jpg" alt="Brand Work 2" class="w-full h-40 object-cover rounded-md">
+      </div>
+
+      <!-- Accordion Item 2 -->
+      <h3 class="cursor-pointer bg-indigo-600 text-white px-4 py-3 mt-2">Design</h3>
+      <div class="border border-t-0 border-slate-200 p-4">
+        <img src="./assets/images/portfolio3.jpg" alt="Design Work 1" class="w-full h-40 object-cover rounded-md mb-2">
+        <img src="./assets/images/portfolio4.jpg" alt="Design Work 2" class="w-full h-40 object-cover rounded-md">
+      </div>
+
+      <!-- Accordion Item 3 -->
+      <h3 class="cursor-pointer bg-indigo-600 text-white px-4 py-3 mt-2">Graphics</h3>
+      <div class="border border-t-0 border-slate-200 p-4">
+        <img src="./assets/images/portfolio5.jpg" alt="Graphics Work 1" class="w-full h-40 object-cover rounded-md mb-2">
+        <img src="./assets/images/portfolio6.jpg" alt="Graphics Work 2" class="w-full h-40 object-cover rounded-md">
+      </div>
+    </div>
+  </div>
+
+  <!-- Accordion Script -->
+  <script>
+    $(function() {
+      $("#accordion").accordion({
+        collapsible: true,
+        heightStyle: "content",
+        active: 0 // Open ALL by default
+      });
+
+      // Custom behavior: open only clicked one, close others
+      $("#accordion").on("accordionactivate", function(event, ui) {
+        if (ui.newHeader.length) {
+          $("#accordion").accordion("option", "active", $("#accordion h3").index(ui.newHeader));
+        }
+      });
+    });
+  </script>
+</section>
+
+
+
+      <!-- Statistics Section -->
+      <section class="relative py-12 sm:py-16 lg:py-20 bg-slate-900 overflow-hidden">
+        <!-- Background -->
+        <div class="absolute inset-0">
+          <img src="./assets/images/bg_2.avif" alt="Professional workspace" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-slate-900/80 backdrop-blur-sm"></div>
+        </div>
+      
+        <!-- Content -->
+        <div class="relative z-10 mx-auto max-w-7xl xl:max-w-[100rem] px-4 sm:px-6 lg:px-8 xl:px-12">
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-center">
+            
+            <!-- Happy Clients -->
+            <div class="flex flex-col items-center">
+              <div class="flex justify-center mb-3 sm:mb-4">
+                <div class="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 border-2 border-indigo-600 rounded-full flex items-center justify-center">
+                  <div class="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 xl:w-12 xl:h-12 rounded-full flex items-center justify-center">
+                    <img src="./assets/icons/Development.png" alt="Development icon" class="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 xl:w-10 xl:h-10 object-contain" />
+                  </div>
+                </div>
+              </div>
+              <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-1 sm:mb-2">368</h3>
+              <p class="text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">Happy Clients</p>
+            </div>
+      
+            <!-- Projects Completed -->
+            <div class="flex flex-col items-center">
+              <div class="flex justify-center mb-3 sm:mb-4">
+                <div class="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 border-2 border-indigo-600 rounded-full flex items-center justify-center">
+                  <div class="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 xl:w-12 xl:h-12 rounded-full flex items-center justify-center">
+                    <img src="./assets/icons/Development.png" alt="Development icon" class="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 xl:w-10 xl:h-10 object-contain" />
+                  </div>
+                </div>
+              </div>
+              <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-1 sm:mb-2">937</h3>
+              <p class="text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">Projects Completed</p>
+            </div>
+      
+            <!-- Files Downloaded -->
+            <div class="flex flex-col items-center">
+              <div class="flex justify-center mb-3 sm:mb-4">
+                <div class="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 border-2 border-indigo-600 rounded-full flex items-center justify-center">
+                  <div class="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 xl:w-12 xl:h-12 rounded-full flex items-center justify-center">
+                    <img src="./assets/icons/Development.png" alt="Development icon" class="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 xl:w-10 xl:h-10 object-contain" />
+                  </div>
+                </div>
+              </div>
+              <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-1 sm:mb-2">438</h3>
+              <p class="text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">Files Downloaded</p>
+            </div>
+      
+            <!-- Lines Of Code -->
+            <div class="flex flex-col items-center">
+              <div class="flex justify-center mb-3 sm:mb-4">
+                <div class="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 border-2 border-indigo-600 rounded-full flex items-center justify-center">
+                  <div class="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 xl:w-12 xl:h-12 rounded-full flex items-center justify-center">
+                    <img src="./assets/icons/Development.png" alt="Development icon" class="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 xl:w-10 xl:h-10 object-contain" />
+                  </div>
+                </div>
+              </div>
+              <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-1 sm:mb-2">5946</h3>
+              <p class="text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">Lines Of Code</p>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing Section -->
+      <section id="pricing" class="py-12 sm:py-16 lg:py-20 bg-slate-100" aria-labelledby="pricing-title">
+        <div class="mx-auto max-w-7xl xl:max-w-[100rem] px-4 sm:px-6 lg:px-8 xl:px-12">
+          
+          <!-- Heading -->
+          <div class="text-center mb-12 sm:mb-16">
+            <h2 id="pricing-title" class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-800 mb-4">Our Pricing</h2>
+            <div class="w-12 sm:w-16 h-1 bg-indigo-600 mx-auto"></div>
+          </div>
+
+          <!-- Pricing Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
+            
+            <!-- Basic Plan -->
+            <div class="relative bg-white rounded-xl shadow-lg overflow-hidden flex flex-col border-2 border-gray-200">
+              <div class="p-6 sm:p-8 flex-1">
+                <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-slate-800 mb-4 text-center">BASIC</h3>
+                <div class="text-center mb-6">
+                  <span class="text-3xl sm:text-4xl lg:text-5xl font-bold text-purple-900">10$</span>
+                  <span class="block text-xs sm:text-sm text-slate-500 uppercase mt-1">per month</span>
+                </div>
+                
+                <ul class="space-y-2 sm:space-y-3 mb-6 sm:mb-8 text-center text-slate-700 text-sm sm:text-base">
+                  <li>10 GB Disk Space</li>
+                  <li>15 Domain Names</li>
+                  <li>4 Email Address</li>
+                  <li class="line-through opacity-50">Enhanced Security</li>
+                  <li>Unlimited Support</li>
+                </ul>
+              </div>
+              <button class="w-full py-2.5 sm:py-3 px-4 sm:px-6 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-medium rounded-b-xl hover:from-indigo-600 hover:to-purple-600 transition-colors text-sm sm:text-base">
+                Order Now
+              </button>
+            </div>
+
+            <!-- Premium Plan -->
+            <div class="relative bg-white rounded-xl shadow-lg overflow-hidden flex flex-col border-2 border-gray-200">
+              <div class="p-6 sm:p-8 flex-1">
+                <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-slate-800 mb-4 text-center">PREMIUM</h3>
+                <div class="text-center mb-6">
+                  <span class="text-3xl sm:text-4xl lg:text-5xl font-bold text-purple-900">50$</span>
+                  <span class="block text-xs sm:text-sm text-slate-500 uppercase mt-1">per month</span>
+                </div>
+                
+                <ul class="space-y-2 sm:space-y-3 mb-6 sm:mb-8 text-center text-slate-700 text-sm sm:text-base">
+                  <li>10 GB Disk Space</li>
+                  <li>15 Domain Names</li>
+                  <li>4 Email Address</li>
+                  <li>Enhanced Security</li>
+                  <li>Unlimited Support</li>
+                </ul>
+              </div>
+              <button class="w-full py-2.5 sm:py-3 px-4 sm:px-6 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-medium rounded-b-xl hover:from-indigo-600 hover:to-purple-600 transition-colors text-sm sm:text-base">
+                Order Now
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Team Section  -->
+      <section id="team" class="py-12 sm:py-16 lg:py-20 bg-white" aria-labelledby="team-title">
+        <div class="mx-auto max-w-7xl xl:max-w-[100rem] px-4 sm:px-6 lg:px-8 xl:px-12">
+          <!-- Section Title -->
+          <div class="text-center mb-12 sm:mb-16">
+            <h2 id="team-title" class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-800 mb-4">Our Team</h2>
+            <div class="w-12 sm:w-16 h-1 bg-indigo-600 mx-auto"></div>
+          </div>
+      
+          <!-- Decorative arrows (only visible on lg+) -->
+          <div class="relative">
+            <button class="hidden lg:grid absolute -left-4 xl:-left-6 top-1/2 -translate-y-1/2 w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-white shadow border border-slate-200 place-items-center text-slate-600 text-sm lg:text-base" aria-label="Previous">
+              &#8249;
+            </button>
+            <button class="hidden lg:grid absolute -right-4 xl:-right-6 top-1/2 -translate-y-1/2 w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-white shadow border border-slate-200 place-items-center text-slate-600 text-sm lg:text-base" aria-label="Next">
+              &#8250;
+            </button>
+      
+            <!-- Team Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 items-start">
+              <!-- Member 1 -->
+              <div class="text-center">
+                <div class="mx-auto h-40 w-40 sm:h-48 sm:w-48 md:h-56 md:w-56 lg:h-64 lg:w-64 rounded-full overflow-hidden shadow-lg relative group">
+                  <img src="./assets/images/bro1.jpg" alt="Alex Smith portrait" class="h-full w-full object-cover" />
+                  <div class="absolute inset-0 bg-indigo-600/0 group-hover:bg-indigo-600/80 transition-colors duration-300 grid place-items-center opacity-0 group-hover:opacity-100">
+                    <div class="flex items-center gap-2 sm:gap-3">
+                      <span class="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-white/20 grid place-items-center text-white text-xs sm:text-sm">f</span>
+                      <span class="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-white/20 grid place-items-center text-white text-xs sm:text-sm">t</span>
+                      <span class="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-white/20 grid place-items-center text-white text-xs sm:text-sm">in</span>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="mt-4 sm:mt-6 text-base sm:text-lg font-semibold text-slate-800">Alex Smith</h3>
+                <p class="text-xs sm:text-sm text-slate-500">Project Manager</p>
+              </div>
+      
+              <!-- Member 2 -->
+              <div class="text-center">
+                <div class="mx-auto h-40 w-40 sm:h-48 sm:w-48 md:h-56 md:w-56 lg:h-64 lg:w-64 rounded-full overflow-hidden shadow-lg relative group">
+                  <img src="./assets/images/bro2.jpg" alt="Martin Smith portrait" class="h-full w-full object-cover" />
+                  <div class="absolute inset-0 bg-indigo-600/0 group-hover:bg-indigo-600/80 transition-colors duration-300 grid place-items-center opacity-0 group-hover:opacity-100">
+                    <div class="flex items-center gap-2 sm:gap-3">
+                      <span class="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-white/20 grid place-items-center text-white text-xs sm:text-sm">f</span>
+                      <span class="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-white/20 grid place-items-center text-white text-xs sm:text-sm">t</span>
+                      <span class="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-white/20 grid place-items-center text-white text-xs sm:text-sm">in</span>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="mt-4 sm:mt-6 text-base sm:text-lg font-semibold text-slate-800">Martin Smith</h3>
+                <p class="text-xs sm:text-sm text-slate-500">Front-End Developer</p>
+              </div>
+      
+              <!-- Member 3 -->
+              <div class="text-center sm:col-span-2 lg:col-span-1">
+                <div class="mx-auto h-40 w-40 sm:h-48 sm:w-48 md:h-56 md:w-56 lg:h-64 lg:w-64 rounded-full overflow-hidden shadow-lg relative group">
+                  <img src="./assets/images/bro3.jpg" alt="Alex Martin portrait" class="h-full w-full object-cover" />
+                  <div class="absolute inset-0 bg-indigo-600/0 group-hover:bg-indigo-600/80 transition-colors duration-300 grid place-items-center opacity-0 group-hover:opacity-100">
+                    <div class="flex items-center gap-2 sm:gap-3">
+                      <span class="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-white/20 grid place-items-center text-white text-xs sm:text-sm">f</span>
+                      <span class="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-white/20 grid place-items-center text-white text-xs sm:text-sm">t</span>
+                      <span class="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-white/20 grid place-items-center text-white text-xs sm:text-sm">in</span>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="mt-4 sm:mt-6 text-base sm:text-lg font-semibold text-slate-800">Alex Martin</h3>
+                <p class="text-xs sm:text-sm text-slate-500">UI/UX Designer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonial Quote Section -->
+      <section class="relative overflow-hidden" aria-label="Testimonial">
+        <div class="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2070&auto=format&fit=crop" alt="Office background" class="h-full w-full object-cover" />
+          <div class="absolute inset-0 bg-slate-900/80"></div>
+        </div>
+
+        <div class="relative z-10 mx-auto max-w-7xl xl:max-w-[100rem] px-4 sm:px-6 lg:px-8 xl:px-12 py-16 sm:py-20 lg:py-24 text-center text-white">
+          <div class="text-3xl sm:text-4xl lg:text-5xl text-indigo-400 mb-4 sm:mb-6">66</div>
+          <p class="mx-auto max-w-3xl text-sm sm:text-base md:text-lg leading-relaxed text-white/90 px-4">
+            Lorem Ipsum is simply dummy text of the printing and type setting industry when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries.
+          </p>
+          <div class="mt-4 sm:mt-6 flex flex-col items-center gap-2">
+            <span class="h-6 sm:h-8 w-px bg-white/40"></span>
+            <a href="#" class="text-indigo-400 hover:text-indigo-300 text-sm sm:text-base">Alex Smith</a>
+            <span class="text-xs sm:text-sm text-white/70">Envato customer</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Brands Strip -->
+      <section class="bg-white py-6 sm:py-8 lg:py-10">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-10 place-items-center text-slate-400">
+            <span class="text-lg sm:text-xl lg:text-2xl font-semibold">envato</span>
+            <span class="text-lg sm:text-xl lg:text-2xl font-semibold">envato</span>
+            <span class="text-lg sm:text-xl lg:text-2xl font-semibold">envato</span>
+            <span class="text-lg sm:text-xl lg:text-2xl font-semibold">envato</span>
+            <span class="text-lg sm:text-xl lg:text-2xl font-semibold col-span-2 sm:col-span-1">envato</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Blog / Latest News -->
+      <section id="blog" class="py-12 sm:py-16 lg:py-20 bg-white" aria-labelledby="blog-title">
+        <div class="mx-auto max-w-7xl xl:max-w-[100rem] px-4 sm:px-6 lg:px-8 xl:px-12">
+          <!-- Section Heading -->
+          <div class="text-center mb-8 sm:mb-12 lg:mb-16">
+            <h2 id="blog-title" class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-800 mb-4">Latest News</h2>
+            <div class="w-12 sm:w-16 h-1 bg-indigo-600 mx-auto"></div>
+          </div>
+      
+          <!-- Blog Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+            <!-- Post 1 -->
+            <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <img class="h-40 sm:h-48 lg:h-56 w-full object-cover" src="./assets/images/blog1.jpg" alt="Team working at computers" />
+              <div class="p-4 sm:p-5 lg:p-6">
+                <p class="text-xs sm:text-sm uppercase tracking-wide text-slate-500">By : Admin · 06 Aug 2017 · WordPress</p>
+                <h3 class="mt-2 sm:mt-3 text-base sm:text-lg lg:text-xl font-semibold text-slate-800">48 Best WordPress Themes</h3>
+                <p class="mt-2 sm:mt-3 text-slate-600 text-xs sm:text-sm lg:text-base">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the dummy text ever.</p>
+                <a href="#" class="mt-3 sm:mt-5 inline-flex rounded-full bg-indigo-600 px-3 sm:px-4 lg:px-5 py-1.5 sm:py-2 text-xs sm:text-sm lg:text-base text-white hover:bg-indigo-500">Read More</a>
+              </div>
+            </article>
+      
+            <!-- Post 2 -->
+            <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <img class="h-40 sm:h-48 lg:h-56 w-full object-cover" src="./assets/images/blog2.jpg" alt="Hands discussing at desk" />
+              <div class="p-4 sm:p-5 lg:p-6">
+                <p class="text-xs sm:text-sm uppercase tracking-wide text-slate-500">By : Admin · 06 Aug 2017 · WordPress</p>
+                <h3 class="mt-2 sm:mt-3 text-base sm:text-lg lg:text-xl font-semibold text-slate-800">48 Best WordPress Themes</h3>
+                <p class="mt-2 sm:mt-3 text-slate-600 text-xs sm:text-sm lg:text-base">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the dummy text ever.</p>
+                <a href="#" class="mt-3 sm:mt-5 inline-flex rounded-full bg-indigo-600 px-3 sm:px-4 lg:px-5 py-1.5 sm:py-2 text-xs sm:text-sm lg:text-base text-white hover:bg-indigo-500">Read More</a>
+              </div>
+            </article>
+      
+            <!-- Post 3 -->
+            <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 sm:col-span-2 lg:col-span-1">
+              <img class="h-40 sm:h-48 lg:h-56 w-full object-cover" src="./assets/images/blog3.jpg" alt="People reviewing data on screens" />
+              <div class="p-4 sm:p-5 lg:p-6">
+                <p class="text-xs sm:text-sm uppercase tracking-wide text-slate-500">By : Admin · 06 Aug 2017 · WordPress</p>
+                <h3 class="mt-2 sm:mt-3 text-base sm:text-lg lg:text-xl font-semibold text-slate-800">48 Best WordPress Themes</h3>
+                <p class="mt-2 sm:mt-3 text-slate-600 text-xs sm:text-sm lg:text-base">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the dummy text ever.</p>
+                <a href="#" class="mt-3 sm:mt-5 inline-flex rounded-full bg-indigo-600 px-3 sm:px-4 lg:px-5 py-1.5 sm:py-2 text-xs sm:text-sm lg:text-base text-white hover:bg-indigo-500">Read More</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Contact Section -->
+      <section id="contact" class="py-12 sm:py-16 lg:py-20 bg-white" aria-labelledby="contact-title">
+        <div class="mx-auto max-w-7xl xl:max-w-[100rem] px-4 sm:px-6 lg:px-8 xl:px-12">
+          <!-- Header -->
+          <div class="text-center mb-8 sm:mb-12 lg:mb-16">
+            <h2 id="contact-title" class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-800 mb-4">Get In Touch</h2>
+            <div class="w-12 sm:w-16 h-1 bg-indigo-600 mx-auto"></div>
+          </div>
+      
+          <!-- Info Cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
+            <div class="relative rounded-lg overflow-hidden shadow-lg">
+              <img src="./assets/images/getintouch1.jpg" alt="Office" class="absolute inset-0 h-full w-full object-cover" />
+              <div class="relative z-10 p-4 sm:p-6 lg:p-8 bg-slate-900/80 text-white">
+                <p class="text-base sm:text-lg font-semibold mb-2">Phone :</p>
+                <p class="text-white/90 text-sm sm:text-base">+20 010 2517 8918</p>
+                <p class="text-white/90 text-sm sm:text-base">+20 010 2517 8918</p>
+              </div>
+            </div>
+            <div class="relative rounded-lg overflow-hidden shadow-lg">
+              <img src="./assets/images/getintough2.jpg" alt="Team" class="absolute inset-0 h-full w-full object-cover" />
+              <div class="relative z-10 p-4 sm:p-6 lg:p-8 bg-slate-900/80 text-white">
+                <p class="text-base sm:text-lg font-semibold mb-2">Email :</p>
+                <p class="text-white/90 text-sm sm:text-base">support@website.com</p>
+                <p class="text-white/90 text-sm sm:text-base">nunito.info@gmail.com</p>
+              </div>
+            </div>
+            <div class="relative rounded-lg overflow-hidden shadow-lg sm:col-span-2 lg:col-span-1">
+              <img src="./assets/images/getintouch3.jpg" alt="Workspace" class="absolute inset-0 h-full w-full object-cover" />
+              <div class="relative z-10 p-4 sm:p-6 lg:p-8 bg-slate-900/80 text-white">
+                <p class="text-base sm:text-lg font-semibold mb-2">Address :</p>
+                <p class="text-white/90 text-sm sm:text-base">650 Live Woshington</p>
+                <p class="text-white/90 text-sm sm:text-base">908 New Homepshire Ave NW</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Form -->
+          <form action="/contact.php" method="POST" class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6" aria-describedby="contact-desc">
+            <p id="contact-desc" class="sr-only">Use this form to send us a message.</p>
+            <div class="space-y-3 sm:space-y-4">
+              <input id="name" name="name" type="text" placeholder="Name *" required class="block w-full rounded-md border border-gray-200 bg-white px-3 sm:px-4 py-2.5 sm:py-3 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-sm sm:text-base" />
+              <input id="email" name="email" type="email" placeholder="Email *" required class="block w-full rounded-md border border-gray-200 bg-white px-3 sm:px-4 py-2.5 sm:py-3 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-sm sm:text-base" />
+              <input id="subject" name="subject" type="text" placeholder="Subject" class="block w-full rounded-md border border-gray-200 bg-white px-3 sm:px-4 py-2.5 sm:py-3 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-sm sm:text-base" />
+            </div>
+            <div>
+              <textarea id="message" name="message" rows="6" placeholder="Your Message *" required class="block w-full rounded-md border border-gray-200 bg-white px-3 sm:px-4 py-2.5 sm:py-3 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-sm sm:text-base resize-none"></textarea>
+            </div>
+            <div class="lg:col-span-2 text-center">
+              <button type="submit" class="inline-block rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 px-6 sm:px-8 py-2.5 sm:py-3 text-white shadow-lg hover:from-indigo-700 hover:to-purple-700 text-sm sm:text-base">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </section>      
+    </main>
+
+    <!-- Map Section -->
+    <section aria-label="Map" class="w-full">
+      <iframe
+        title="Gegosoft Madurai Office Location"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3947.707250723684!2d78.11853177484186!3d9.925200373778447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c59d1f85c5e5%3A0x5d3d3a6d11e7b9d!2sGegosoft%20Technologies%20-%20Web%20Design%20Company%20Madurai!5e0!3m2!1sen!2sin!4v1726650000000!5m2!1sen!2sin"
+        class="w-full h-64 sm:h-80 md:h-96 lg:h-[500px] xl:h-[600px]"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-300" role="contentinfo">
+      <div class="mx-auto max-w-7xl xl:max-w-[100rem] px-4 sm:px-6 lg:px-8 xl:px-12 py-10 sm:py-12 lg:py-14 text-center">
+        <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-white">Nunito</h3>
+    
+        <div class="mt-4 sm:mt-6 flex flex-wrap items-center justify-center gap-2 sm:gap-3 lg:gap-4">
+          <a href="#" class="h-8 w-8 sm:h-9 sm:w-9 rounded-full bg-slate-800 grid place-items-center hover:bg-slate-700 text-xs sm:text-sm">f</a>
+          <a href="#" class="h-8 w-8 sm:h-9 sm:w-9 rounded-full bg-slate-800 grid place-items-center hover:bg-slate-700 text-xs sm:text-sm">t</a>
+          <a href="#" class="h-8 w-8 sm:h-9 sm:w-9 rounded-full bg-slate-800 grid place-items-center hover:bg-slate-700 text-xs sm:text-sm">in</a>
+          <a href="#" class="h-8 w-8 sm:h-9 sm:w-9 rounded-full bg-slate-800 grid place-items-center hover:bg-slate-700 text-xs sm:text-sm">ig</a>
+          <a href="#" class="h-8 w-8 sm:h-9 sm:w-9 rounded-full bg-slate-800 grid place-items-center hover:bg-slate-700 text-xs sm:text-sm">yt</a>
+        </div>
+    
+        <p class="mt-4 sm:mt-6 text-xs sm:text-sm tracking-wide text-slate-400">
+          © 2025 UI-THEMEZ. ALL RIGHTS RESERVED.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Mobile menu toggle script -->
+    <script>
+      document.getElementById('mobileMenuButton').addEventListener('click', function() {
+        const menu = document.getElementById('mobileMenu');
+        const button = this;
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+        
+        menu.classList.toggle('hidden');
+        button.setAttribute('aria-expanded', !isExpanded);
+      });
+    </script>
+  </body>
+</html>
+
